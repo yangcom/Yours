@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 
 public class CalmFragment extends Fragment {
 
+    public CalmFragment() {
+        // Required empty public constructor
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

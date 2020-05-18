@@ -10,8 +10,10 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
-    private CalmFragment fragmentCalm;
+
+    private IntroFragment fragmentIntro;
     private IntentFragment fragmentIntent;
+    private CalmFragment fragmentCalm;
     private ThirdFragment fragmentThird;
     private SimulateFragment fragmentSim;
     private FragmentTransaction transaction;
@@ -24,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
 
+        fragmentIntro = new IntroFragment();
         fragmentCalm = new CalmFragment();
         fragmentIntent = new IntentFragment();
         fragmentThird = new ThirdFragment();
         fragmentSim = new SimulateFragment();
 
         transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragmentIntent).commitAllowingStateLoss();
+        transaction.replace(R.id.frameLayout, fragmentIntro).commitAllowingStateLoss();
     }
 
     public void clickHandler(View view)
